@@ -7,4 +7,4 @@ In order to use it:
 
 `paver run` 
 
-and you should be up and running. Obviously you'll need an X server on the host, so it should work fine on Linux & OSX. 
+and you should be up and running. You'll need an X server on the host, so it should work fine on Linux & OSX. 
