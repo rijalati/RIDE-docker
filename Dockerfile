@@ -37,7 +37,7 @@ RUN pip2 install \
     Pygments
 
 RUN mkdir /var/run/sshd
-RUN echo 'root:ride' | chpasswd
+RUN echo 'root:robotframework' | chpasswd
 RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN sed -i 's/\#X11Forwarding no/X11Forwarding yes/' /etc/ssh/sshd_config
 
