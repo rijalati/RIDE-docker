@@ -33,6 +33,7 @@ RUN pip2 install \
     robotframework-selenium2screenshots \
     robotframework-sshlibrary \
     robotframework-tools \
+    robotframework-hub \
     Pygments
 
 RUN mkdir /var/run/sshd
