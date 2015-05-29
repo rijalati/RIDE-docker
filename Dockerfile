@@ -22,18 +22,31 @@ RUN pacman -Syu --noconfirm --needed \
     xorg-fonts-75dpi \
     xorg-fonts-100dpi \
     firefox \
+    emacs-nox \
+    vim \
+    vim-plugins \
     sudo
 
 RUN pip2 install \
     Paver \
     robotframework \
+    robotframework-tools \
     robotframework-rfdoc \
     robotframework-selenium2library \
     robotframework-selenium2screenshots \
     robotframework-sshlibrary \
-    robotframework-tools \
     robotframework-hub \
-    Pygments
+    robotframework-lint \
+    robotframework-pageobjects \
+    robotframework-pycurllibrary \
+    robotframework-httplibrary \
+    sphinxcontrib-robotframework \
+    Pygments \
+    jedi \
+    pep8 \
+    pylint \
+    pyflakes \
+    requests     
 
 RUN git clone https://github.com/robotframework/RIDE.git
 
