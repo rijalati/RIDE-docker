@@ -46,18 +46,21 @@ RUN pip2 install \
     pep8 \
     pylint \
     pyflakes \
-    requests     
+    requests \
+    rope
 
-RUN git clone https://github.com/robotframework/RIDE.git
+
 
 
 RUN useradd -m -G wheel -U admin 
 RUN echo 'admin:secret' | chpasswd
 RUN echo 'admin ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
+#RUN chown -R admin:admin /RIDE
 
 USER admin
+RUN git clone https://github.com/robotframework/RIDE.git /home/admin/RIDE
 ENV HOME /home/admin
-WORKDIR /RIDE
+WORKDIR /home/admin/RIDE
 CMD ["/usr/bin/paver", "run"]
 
